@@ -85,7 +85,7 @@ def show_generation_result():
         # 2D model
         fig = plt.figure(1, figsize=(fig_x, fig_y))
         ax = fig.add_subplot(111)
-        ax.contour(x, y, z, 25, linewidths=1, cmap=plt.cm.Greys, linestyles='dashed', zorder=0)
+        ax.contour(x, y, z, 25, linewidths=0.7, cmap=plt.cm.Greys, linestyles='dashed', zorder=0)
         for x, y, name, color in zip(data['true_cl'], data['true_clv'], data['name'], data['color']):
             plotting.add_point(ax=ax, pos=(x, y), x_range=x_range, y_range=y_range, name=name, color=color)
         plotting.set_axis_info(ax, x_range=x_range, y_range=y_range,
